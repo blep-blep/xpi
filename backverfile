@@ -1,0 +1,7 @@
+#!/bin/sh
+#check verison and compare to git for updates.
+#check config, its permissions and existance.
+cd $PWD/
+ls config.json>/dev/null || touch $PWD/config.json
+cat config.json || chmod 666 config.json | cat config.json>/dev/null
+python __init__.py
